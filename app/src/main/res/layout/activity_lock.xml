@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.imitateqq.Aty.LockActivity">
+
+    <com.imitateqq.CustomerView.AvatarImageView
+        android:id="@+id/lock_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:id="@+id/notify_tv"
+        android:text="请绘制手势密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lock_avatar"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+    <com.imitateqq.CustomerView.GestureLockView
+        android:id="@+id/lock_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/notify_tv"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
+        android:text="忘记密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lock_view"
+        android:layout_marginTop="30dp"
+        />
+
+</RelativeLayout>
