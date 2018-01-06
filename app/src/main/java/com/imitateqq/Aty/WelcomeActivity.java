@@ -23,7 +23,7 @@ public class WelcomeActivity extends Activity {
             public boolean handleMessage(Message msg) {
                 if(msg.what == 1){
                     finish();
-                    Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
+                    Intent intent = new Intent(WelcomeActivity.this,MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }

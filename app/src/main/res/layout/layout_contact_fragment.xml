@@ -4,113 +4,170 @@
     android:background="@drawable/skin_conversation_bg"
     android:orientation="vertical"
     >
-    <include layout="@layout/layout_main_title"/>
+    <include layout="@layout/layout_contact_title"/>
     <include layout="@layout/layout_searchbar"/>
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="10dp"
+
+    <ScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/skin_conversation_bg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        >
-        <!-- 新朋友-->
+        android:layout_height="match_parent">
+
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="vertical"
-            >
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:paddingTop="10dp"
-                android:background="@drawable/contactnewfriend"
-                android:layout_gravity="center"
-                />
-            <TextView
-                android:text="新朋友"
-                android:textSize="15sp"
-                android:textColor="#000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                />
-        </LinearLayout>
-        <!-- 特别关心-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:paddingTop="10dp"
-                android:background="@drawable/contact_specialcare"
-                android:layout_gravity="center"
-                />
-            <TextView
-                android:text="特别关心"
-                android:textSize="15sp"
-                android:textColor="#000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                />
-        </LinearLayout>
-        <!-- 组群-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:paddingTop="10dp"
-                android:background="@drawable/contact_list_troop_"
-                android:layout_gravity="center"
-                />
-            <TextView
-                android:text="组群"
-                android:textSize="15sp"
-                android:textColor="#000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                />
-        </LinearLayout>
-        <!-- 公众号-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:paddingTop="10dp"
-                android:background="@drawable/contact_list_pbaccount"
-                android:layout_gravity="center"
-                />
-            <TextView
-                android:text="公众号"
-                android:textSize="15sp"
-                android:textColor="#000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.imitateqq.CustomerView.PicAndTextBtn
+                android:id="@+id/patb_bar_groups"
+                app:pic="@drawable/rise"
+                app:text="Groups"
+                app:textSize="8sp"
+                app:textColor="#000000"
+                android:paddingLeft="10dp"
+                android:background="@color/hui"
+                android:layout_width="match_parent"
+                android:layout_height="46dp">
+            </com.imitateqq.CustomerView.PicAndTextBtn>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list_groups"
+                android:background="#ffff"
+                android:layout_marginBottom="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+
+            <com.imitateqq.CustomerView.PicAndTextBtn
+                android:id="@+id/patb_bar__contacts"
+                app:pic="@drawable/rise"
+                app:text="Contacts"
+                app:textSize="8sp"
+                app:textColor="#000000"
+                android:paddingLeft="10dp"
+                android:background="@color/hui"
+                android:layout_width="match_parent"
+                android:layout_height="46dp">
+            </com.imitateqq.CustomerView.PicAndTextBtn>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list_contacts"
+                android:background="#ffff"
+                android:layout_marginBottom="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
         </LinearLayout>
 
+    </ScrollView>
     </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:paddingTop="15dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#fff"-->
+        <!--&gt;-->
+        <!--&lt;!&ndash; 新朋友&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:background="@drawable/contactnewfriend"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:text="新朋友"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="#000"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+        <!--&lt;!&ndash; 特别关心&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:background="@drawable/contact_specialcare"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:text="特别关心"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="#000"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+        <!--&lt;!&ndash; 组群&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:background="@drawable/contact_list_troop_"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:text="组群"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="#000"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+        <!--&lt;!&ndash; 公众号&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:background="@drawable/contact_list_pbaccount"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:text="公众号"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="#000"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
 
-</LinearLayout>
+    <!--</LinearLayout>-->
+
+

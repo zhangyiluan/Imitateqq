@@ -10,8 +10,8 @@ import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.imitateqq.Fragment.ContactFragment;
-import com.imitateqq.Fragment.MsgFragment;
+import com.imitateqq.Fragment.LayoutChats;
+import com.imitateqq.Fragment.LayoutContacts;
 import com.imitateqq.Fragment.MyFragment;
 import com.imitateqq.R;
 
@@ -43,7 +43,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         msg_rbtn.setChecked(true);
         radioGroup.setOnCheckedChangeListener(this);
 
-        fragmentTransaction.add(R.id.fragment, new MsgFragment());
+        fragmentTransaction.add(R.id.fragment, new LayoutChats());
         fragmentTransaction.commit();
     }
 
@@ -58,10 +58,10 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId){
             case R.id.msg_rbtn:
-                switchFragment(new MsgFragment());
+                switchFragment(new LayoutChats());
                 break;
             case R.id.contact_rbtn:
-                switchFragment(new ContactFragment());
+                switchFragment(new LayoutContacts());
                 break;
             case R.id.qzone_rbtn:
                 switchFragment(new MyFragment());
